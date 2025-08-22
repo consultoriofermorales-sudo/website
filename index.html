@@ -46,6 +46,7 @@
 </head>
 <body class="antialiased">
 
+    <!-- Header & Navigation -->
     <header class="bg-gray-900/50 backdrop-blur-sm fixed top-0 left-0 right-0 z-10">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-xl font-semibold text-white">Fernando Morales, MD, CMI</div>
@@ -61,6 +62,7 @@
     </header>
 
     <main>
+        <!-- Section 1: Hero Section -->
         <section id="home" class="section pt-32 md:pt-48 bg-gray-900/30">
             <div class="container mx-auto text-center px-6">
                 <img src="https://i.imgur.com/YyQfrC7.png" alt="Dr. Fernando Morales Headshot" class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-accent-gold shadow-lg object-cover">
@@ -75,6 +77,7 @@
             </div>
         </section>
 
+        <!-- Section 2: "Why Me?" Section -->
         <section id="why-me" class="section bg-gray-900/50">
             <div class="container mx-auto px-6 max-w-4xl text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Unparalleled Precision Where Medicine and Law Intersect.</h2>
@@ -85,10 +88,12 @@
             </div>
         </section>
 
+        <!-- Section 3: Services Offered -->
         <section id="services" class="section">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">Specialized Interpretation Services</h2>
                 <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
                     <div class="bg-gray-900/50 p-8 rounded-lg text-center border border-gray-700 shadow-lg">
                         <div class="flex justify-center mb-4">
                              <svg class="w-12 h-12 accent-gold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -96,6 +101,7 @@
                         <h3 class="text-2xl font-bold text-white mb-4">Medico-Legal Interpretation</h3>
                         <p class="text-gray-400">For depositions, Independent Medical Exams (IMEs), and client interviews where medical accuracy is critical to the legal outcome.</p>
                     </div>
+                    <!-- Service 2 -->
                     <div class="bg-gray-900/50 p-8 rounded-lg text-center border border-gray-700 shadow-lg">
                         <div class="flex justify-center mb-4">
                             <svg class="w-12 h-12 accent-gold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
@@ -103,6 +109,7 @@
                         <h3 class="text-2xl font-bold text-white mb-4">Clinical Trial Interpretation</h3>
                         <p class="text-gray-400">For informed consent processes, investigator meetings, and patient communications in global clinical research settings.</p>
                     </div>
+                    <!-- Service 3 -->
                     <div class="bg-gray-900/50 p-8 rounded-lg text-center border border-gray-700 shadow-lg">
                         <div class="flex justify-center mb-4">
                             <svg class="w-12 h-12 accent-gold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
@@ -114,6 +121,7 @@
             </div>
         </section>
 
+        <!-- Section 4: Credentials -->
         <section id="credentials" class="section bg-gray-900/50">
             <div class="container mx-auto px-6 text-center">
                  <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Verifiable Expertise</h2>
@@ -126,23 +134,36 @@
                          <h3 class="text-xl font-bold accent-gold mb-2">Certified Medical Interpreter (CMI)</h3>
                          <p class="text-gray-300">The National Board of Certification for Medical Interpreters</p>
                      </div>
-                     <div class="bg-gray-800/40 p-6 rounded-lg border border-gray-700">
-                         <h3 class="text-xl font-bold accent-gold mb-2">Published Researcher</h3>
-                         <p class="text-gray-300">Peer-reviewed articles in *Anales de Radiología, Mexico*</p>
-                     </div>
-                     <div class="bg-gray-800/40 p-6 rounded-lg border border-gray-700">
-                         <h3 class="text-xl font-bold accent-gold mb-2">Languages</h3>
-                         <p class="text-gray-300">Native Proficiency in English & Spanish</p>
+                     <div class="bg-gray-800/40 p-6 rounded-lg border border-gray-700 md:col-span-2">
+                         <h3 class="text-xl font-bold accent-gold mb-3">Publications</h3>
+                         <ul class="list-disc list-inside text-gray-300 space-y-2">
+                             <li>
+                                 <a href="https://doi.org/10.24875/ARM.20000206" target="_blank" rel="noopener noreferrer" class="hover:text-accent-gold underline">
+                                     Persistent Trigeminal Artery: Report of two cases.
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="https://doi.org/10.24875/ARM.20000202" target="_blank" rel="noopener noreferrer" class="hover:text-accent-gold underline">
+                                     Sprengel's Deformity associated with Klippel-Feil Syndrome.
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="https://doi.org/10.24875/ARM.19000137" target="_blank" rel="noopener noreferrer" class="hover:text-accent-gold underline">
+                                     Temporal Encephalocele Through the Lateral Wall of the Sphenoid Sinus.
+                                 </a>
+                             </li>
+                         </ul>
                      </div>
                  </div>
             </div>
         </section>
 
+        <!-- Section 5: Contact -->
         <section id="contact" class="section">
             <div class="container mx-auto px-6 max-w-3xl text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Contact for Availability & Rates</h2>
                 <p class="text-lg text-gray-400 mb-10">I am available for remote contract assignments. Please reach out to discuss your specific needs.</p>
-                <!-- Form updated with netlify-honeypot attribute -->
+                <!-- Form tag updated for Netlify Forms with Honeypot -->
                 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="text-left space-y-6">
                     <!-- Honeypot field for spam prevention -->
                     <p class="hidden-field">
@@ -174,10 +195,12 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-900/50">
         <div class="container mx-auto px-6 py-6 text-center text-gray-500">
             <p>&copy; 2025 Fernando Abel Morales Aguilar, MD, CMI. All Rights Reserved.</p>
             <p class="mt-2">
+                <!-- LinkedIn Profile URL updated -->
                 <a href="https://www.linkedin.com/in/dr-fernando-abel-morales-aguilar-59621b2b6" target="_blank" rel="noopener noreferrer" class="hover:text-accent-gold">LinkedIn Profile</a>
             </p>
         </div>
