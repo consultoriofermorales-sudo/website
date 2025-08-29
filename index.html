@@ -19,17 +19,32 @@
         /* Hero Section */
         .hero {
             background-color: #f8f9fa;
-            padding: 80px 0;
-            text-align: center;
+            padding: 60px 0;
             border-bottom: 1px solid #dee2e6;
         }
-        .hero h1 {
-            font-size: 3em;
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+        .hero-photo img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .hero-text h1 {
+            font-size: 2.8em;
             margin: 0 0 10px 0;
             color: #212529;
+            line-height: 1.2;
         }
-        .hero h2 {
-            font-size: 1.5em;
+        .hero-text h2 {
+            font-size: 1.4em;
             font-weight: 300;
             color: #0056b3;
             margin: 0 0 30px 0;
@@ -69,25 +84,37 @@
             color: #212529;
         }
 
-        /* Services Section */
-        .services-grid {
+        /* Services & Practice Areas */
+        .grid {
             display: flex;
             justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
         }
-        .service-card {
+        .card {
             background-color: #f8f9fa;
             border: 1px solid #dee2e6;
             border-radius: 8px;
             padding: 30px;
             width: 300px;
             text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .service-card h3 {
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.05);
+        }
+        .card h3 {
             font-size: 1.5em;
             margin-top: 0;
             color: #0056b3;
+        }
+        .card.highlight {
+            border-color: #28a745;
+            border-width: 2px;
+        }
+        .card.highlight h3 {
+            color: #28a745;
         }
 
         /* Advantage Section */
@@ -135,6 +162,35 @@
             font-size: 1.5em;
         }
         
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+        }
+        .process-step .step-number {
+            border: 2px solid #007bff;
+            color: #007bff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .process-step h3 {
+            margin-bottom: 10px;
+        }
+        
         /* Contact Section */
         .contact {
             background-color: #212529;
@@ -156,6 +212,12 @@
          .contact .cta-button:hover {
             background-color: #e9ecef;
         }
+        .contact .current-status {
+            font-size: 0.9em;
+            color: #adb5bd;
+            margin-top: 30px;
+            font-style: italic;
+        }
         
         /* Footer */
         .footer {
@@ -170,29 +232,33 @@
 <body>
 
     <header class="hero">
-        <div class="container">
-            <h1>Elite Medico-Legal Interpretation & Consulting</h1>
-            <!-- MODIFIED: Changed headline to be honest about current status -->
-            <h2>Fernando Morales, MD | Pursuing CMI Certification (Anticipated 2026)</h2>
-            <a href="#contact" class="cta-button">Join My Professional Waitlist</a>
+        <div class="container hero-content">
+            <div class="hero-photo">
+                <img src="https://i.imgur.com/YyQfrC7.png" alt="Dr. Fernando Morales">
+            </div>
+            <div class="hero-text">
+                <h1>Elite Medico-Legal Interpretation</h1>
+                <h2>Fernando Morales, MD | Pursuing CMI Certification (Anticipated 2026)</h2>
+                <a href="#contact" class="cta-button">Join My Professional Waitlist</a>
+            </div>
         </div>
     </header>
 
     <section class="section" id="services">
         <div class="container">
             <h2 class="section-title">Core Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Medical Depositions</h3>
-                    <p>Providing flawless, confidential interpretation for depositions where complex medical testimony is critical. Available remotely and in-person.</p>
+            <div class="grid">
+                <div class="card highlight">
+                    <h3>Physician Consulting (Available Now)</h3>
+                    <p>Leverage my medical background for immediate case support, including medical document review, case strategy, and understanding clinical nuances.</p>
                 </div>
-                <div class="service-card">
+                <div class="card">
+                    <h3>Medical Depositions</h3>
+                    <p>Providing flawless interpretation for depositions where complex medical testimony is critical. Available remotely and in-person.</p>
+                </div>
+                <div class="card">
                     <h3>Independent Medical Exams (IMEs)</h3>
                     <p>Ensuring clear and accurate communication between physicians and examinees for personal injury and workers' compensation cases.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Physician Consulting</h3>
-                    <p>Leveraging my medical background to assist your legal team with medical document review, case strategy, and understanding clinical nuances.</p>
                 </div>
             </div>
         </div>
@@ -211,10 +277,52 @@
                     <ul>
                         <li><strong>Mitigate Risk.</strong> Eliminate the danger of costly medical mistranslations that can jeopardize your case. My clinical experience ensures perfect accuracy.</li>
                         <li><strong>Unparalleled Expertise.</strong> As a native bilingual physician, I understand the deep clinical nuances behind the words, providing a level of comprehension standard interpreters cannot match.</li>
-                        <!-- MODIFIED: Changed language to reflect pending certification -->
-                        <li><strong>Commitment to Excellence.</strong> As a candidate for CMI certification, I am dedicated to adhering to the highest national standards of ethics, confidentiality, and professional conduct required in a legal setting.</li>
+                        <li><strong>Commitment to Excellence.</strong> As a candidate for CMI certification, I am dedicated to adhering to the highest national standards of ethics, confidentiality, and professional conduct.</li>
                     </ul>
                     <a href="link-to-your-cv.pdf" class="cta-button secondary-button" target="_blank">Download Full CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Specializing In</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Personal Injury</h3>
+                    <p>Expert interpretation for cases involving automotive accidents, premises liability, and traumatic injuries, with deep experience in Emergency Medicine protocols.</p>
+                </div>
+                <div class="card">
+                    <h3>Medical Malpractice</h3>
+                    <p>Providing physician-level understanding of complex medical procedures and standards of care to ensure testimony is interpreted without error.</p>
+                </div>
+                <div class="card">
+                    <h3>Workers' Compensation</h3>
+                    <p>Facilitating clear communication in cases involving workplace injuries, long-term disability, and assessments of functional capacity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Initial Contact & Conflict Check</h3>
+                    <p>Reach out with your case details. I will promptly conduct a conflict check to ensure impartiality before proceeding.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Case Review & Scheduling</h3>
+                    <p>We will discuss the specific requirements of your case, agree upon terms, and schedule the assignment at your convenience.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Flawless Execution</h3>
+                    <p>I will provide punctual, professional, and precise service, adhering to the strictest standards of confidentiality and accuracy.</p>
                 </div>
             </div>
         </div>
@@ -222,9 +330,12 @@
     
     <section class="section contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Contact for Future Availability</h2>
-            <p>I will be accepting assignments upon achieving CMI certification. Please contact me to be added to my professional waitlist and to discuss your future case needs.</p>
+            <h2 class="section-title">Contact for Availability</h2>
+            <p>Please contact me to discuss immediate physician consulting needs or to be added to my waitlist for certified interpretation services.</p>
             <a href="mailto:contact@fernandomoralesmd.com" class="cta-button">Email: contact@fernandomoralesmd.com</a>
+            <p class="current-status">
+                Current Status as of August 2025: Actively preparing for CMI certification and accepting select physician consulting projects.
+            </p>
         </div>
     </section>
     
@@ -234,4 +345,3 @@
 
 </body>
 </html>
-
