@@ -3,212 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando Abel Morales Aguilar, MD, CMI - Medico-Legal Consultant</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Fernando Morales, MD, CMI-Spanish | Medico-Legal Interpreter & Consultant</title>
     <style>
-        /* Custom styles based on the blueprint */
         body {
-            background-color: #1a1a1a; /* Dark charcoal */
-            color: #f0f0f0;
-            font-family: 'Lato', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            color: #333;
+            background-color: #fff;
         }
-        h1, h2, h3 {
-            font-family: 'Lora', serif;
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .accent-gold {
-            color: #c5a47e; /* Muted gold */
+        /* Hero Section */
+        .hero {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px solid #dee2e6;
         }
-        .bg-accent-gold {
-            background-color: #c5a47e;
+        .hero h1 {
+            font-size: 3em;
+            margin: 0 0 10px 0;
+            color: #212529;
         }
-        .border-accent-gold {
-            border-color: #c5a47e;
+        .hero h2 {
+            font-size: 1.5em;
+            font-weight: 300;
+            color: #0056b3;
+            margin: 0 0 30px 0;
         }
-        .hover-bg-accent-gold-dark:hover {
-            background-color: #b3936d;
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.2s;
         }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .secondary-button {
+            background-color: transparent;
+            color: #007bff;
+            border: 1px solid #007bff;
+            margin-top: 15px;
+        }
+        .secondary-button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            padding: 20px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+        .trust-bar span {
+            font-size: 1em;
+            color: #6c757d;
+            margin-right: 20px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+        .trust-bar img {
+            height: 40px;
+            margin: 0 15px;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            vertical-align: middle;
+        }
+
+        /* General Section Styling */
         .section {
-            padding: 6rem 1rem;
+            padding: 60px 0;
         }
-        @media (max-width: 768px) {
-            .section {
-                padding: 4rem 1rem;
-            }
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #212529;
         }
-        /* Style to hide the honeypot field */
-        .hidden-field {
-            display: none;
+
+        /* Services Section */
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.05);
+        }
+        .service-card h3 {
+            font-size: 1.5em;
+            margin-top: 0;
+            color: #0056b3;
+        }
+
+        /* Advantage Section */
+        .advantage-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .advantage-video {
+            flex-basis: 400px;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #6c757d;
+        }
+        .advantage-points {
+            flex: 1;
+            min-width: 300px;
+        }
+        .advantage-points ul {
+            list-style: none;
+            padding: 0;
+        }
+        .advantage-points li {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            padding-left: 35px;
+            position: relative;
+        }
+        .advantage-points li::before {
+            content: '✔';
+            color: #28a745;
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+        }
+        
+        /* NEW Qualifications Section */
+        .qualifications-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .qualification-card {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 280px;
+        }
+        .qualification-card h3 {
+            font-size: 1.4em;
+            color: #0056b3;
+            margin-top: 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #212529;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .contact h2 {
+            color: #fff;
+        }
+        .contact p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .contact .cta-button {
+            background-color: #fff;
+            color: #007bff;
+        }
+         .contact .cta-button:hover {
+            background-color: #e9ecef;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #6c757d;
+            font-size: 0.9em;
         }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Header & Navigation -->
-    <header class="bg-gray-900/50 backdrop-blur-sm fixed top-0 left-0 right-0 z-10">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-semibold text-white">Fernando Morales, MD, CMI</div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#services" class="text-gray-300 hover:text-white">Services</a>
-                <a href="#credentials" class="text-gray-300 hover:text-white">Credentials</a>
-                <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
-            </nav>
-            <a href="#contact" class="hidden md:inline-block bg-accent-gold text-gray-900 font-bold py-2 px-4 rounded-lg hover-bg-accent-gold-dark transition-colors">
-                Contact
-            </a>
+    <header class="hero">
+        <div class="container">
+            <h1>Elite Medico-Legal Interpretation & Consulting</h1>
+            <h2>When Medical Accuracy is Non-Negotiable. <br>Fernando Morales, MD, CMI-Spanish</h2>
+            <a href="#contact" class="cta-button">Request My Services</a>
         </div>
     </header>
 
-    <main>
-        <!-- Section 1: Hero Section -->
-        <section id="home" class="section pt-32 md:pt-48 bg-gray-900/30">
-            <div class="container mx-auto text-center px-6">
-                <img src="https://i.imgur.com/YyQfrC7.png" alt="Dr. Fernando Morales Headshot" class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-accent-gold shadow-lg object-cover">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Fernando Abel Morales Aguilar, MD, CMI</h1>
-                <h2 class="text-2xl md:text-3xl accent-gold mb-8">Physician-Interpreter | Medico-Legal & Clinical Trial Specialist</h2>
-                <p class="max-w-3xl mx-auto text-gray-300 text-lg mb-10">
-                    Providing an unparalleled level of accuracy and medical context for high-stakes legal and clinical research settings where precision is paramount.
-                </p>
-                <a href="#contact" class="bg-accent-gold text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover-bg-accent-gold-dark transition-colors shadow-xl">
-                    Schedule a Consultation
-                </a>
-            </div>
-        </section>
+    <section class="trust-bar">
+        <div class="container">
+            <span>TRUSTED BY:</span>
+            <img src="https://via.placeholder.com/150x40?text=Top+US+Law+Firms" alt="Top US Law Firms">
+            <img src="https://via.placeholder.com/150x40?text=Insurance+Carriers" alt="Insurance Carriers">
+            <img src="https://via.placeholder.com/150x40?text=Language+Providers" alt="Language Service Providers">
+        </div>
+    </section>
 
-        <!-- Section 2: "Why Me?" Section -->
-        <section id="why-me" class="section bg-gray-900/50">
-            <div class="container mx-auto px-6 max-w-4xl text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Unparalleled Precision Where Medicine and Law Intersect.</h2>
-                <div class="w-24 h-1 bg-accent-gold mx-auto mb-8"></div>
-                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-                    In high-stakes legal and clinical settings, a simple translation is not enough. You need a contextual understanding that only a physician can provide. As a CMI-Certified Medical Doctor with over three years of clinical experience, I deliver a level of accuracy and risk mitigation that ensures your case is built on a foundation of medically sound communication.
-                </p>
-            </div>
-        </section>
-
-        <!-- Section 3: Services Offered -->
-        <section id="services" class="section">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">Specialized Interpretation Services</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="bg-gray-900/50 p-8 rounded-lg text-center border border-gray-700 shadow-lg">
-                        <div class="flex justify-center mb-4">
-                             <svg class="w-12 h-12 accent-gold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-4">Medico-Legal Interpretation</h3>
-                        <p class="text-gray-400">For depositions, Independent Medical Exams (IMEs), and client interviews where medical accuracy is critical to the legal outcome.</p>
-                    </div>
-                    <!-- Service 2 -->
-                    <div class="bg-gray-900/50 p-8 rounded-lg text-center border border-gray-700 shadow-lg">
-                        <div class="flex justify-center mb-4">
-                            <svg class="w-12 h-12 accent-gold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-4">Clinical Trial Interpretation</h3>
-                        <p class="text-gray-400">For informed consent processes, investigator meetings, and patient communications in global clinical research settings.</p>
-                    </div>
-                    <!-- Service 3 -->
-                    <div class="bg-gray-900/50 p-8 rounded-lg text-center border border-gray-700 shadow-lg">
-                        <div class="flex justify-center mb-4">
-                            <svg class="w-12 h-12 accent-gold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-4">Medical Document Review</h3>
-                        <p class="text-gray-400">Providing physician-level analysis and verification of translated medical records to ensure complete accuracy and contextual integrity.</p>
-                    </div>
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-title">Core Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Medical Depositions</h3>
+                    <p>Providing flawless, confidential interpretation for depositions where complex medical testimony is critical. Available remotely and in-person.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Independent Medical Exams (IMEs)</h3>
+                    <p>Ensuring clear and accurate communication between physicians and examinees for personal injury and workers' compensation cases.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Physician Consulting</h3>
+                    <p>Leveraging my medical background to assist your legal team with medical document review, case strategy, and understanding clinical nuances.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Section 4: Credentials -->
-        <section id="credentials" class="section bg-gray-900/50">
-            <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Verifiable Expertise</h2>
-                 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                     <div class="bg-gray-800/40 p-6 rounded-lg border border-gray-700">
-                         <h3 class="text-xl font-bold accent-gold mb-2">Medical Doctor (MD)</h3>
-                         <p class="text-gray-300">Universidad Autónoma de Chihuahua</p>
-                     </div>
-                     <div class="bg-gray-800/40 p-6 rounded-lg border border-gray-700">
-                         <h3 class="text-xl font-bold accent-gold mb-2">Certified Medical Interpreter (CMI)</h3>
-                         <p class="text-gray-300">The National Board of Certification for Medical Interpreters</p>
-                     </div>
-                     <!-- Updated Publications Section with Links -->
-                     <div class="bg-gray-800/40 p-6 rounded-lg border border-gray-700">
-                        <h3 class="text-xl font-bold accent-gold mb-3">Publications</h3>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2">
-                            <li>
-                                <a href="https://doi.org/10.24875/ARM.20000206" target="_blank" rel="noopener noreferrer" class="hover:text-accent-gold underline">
-                                    Persistent Trigeminal Artery: Report of two cases.
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://doi.org/10.24875/ARM.20000202" target="_blank" rel="noopener noreferrer" class="hover:text-accent-gold underline">
-                                    Sprengel's Deformity associated with Klippel-Feil Syndrome.
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://doi.org/10.24875/ARM.19000137" target="_blank" rel="noopener noreferrer" class="hover:text-accent-gold underline">
-                                    Temporal Encephalocele Through the Lateral Wall of the Sphenoid Sinus.
-                                </a>
-                            </li>
-                        </ul>
-                     </div>
-                     <div class="bg-gray-800/40 p-6 rounded-lg border border-gray-700">
-                         <h3 class="text-xl font-bold accent-gold mb-2">Languages</h3>
-                         <p class="text-gray-300">Native Proficiency in English & Spanish</p>
-                     </div>
-                 </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Contact -->
-        <section id="contact" class="section">
-            <div class="container mx-auto px-6 max-w-3xl text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Contact for Availability & Rates</h2>
-                <p class="text-lg text-gray-400 mb-10">I am available for remote contract assignments. Please reach out to discuss your specific needs.</p>
-                <!-- Form tag updated for Netlify Forms with Honeypot -->
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="text-left space-y-6">
-                    <!-- Honeypot field for spam prevention -->
-                    <p class="hidden-field">
-                        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-                    </p>
-                    <div>
-                        <label for="name" class="text-sm font-bold text-gray-300">Name</label>
-                        <input type="text" id="name" name="name" class="w-full mt-2 p-3 bg-gray-800 rounded-lg border border-gray-700 text-white focus:outline-none focus:border-accent-gold" required>
-                    </div>
-                    <div>
-                        <label for="email" class="text-sm font-bold text-gray-300">Email</label>
-                        <input type="email" id="email" name="email" class="w-full mt-2 p-3 bg-gray-800 rounded-lg border border-gray-700 text-white focus:outline-none focus:border-accent-gold" required>
-                    </div>
-                    <div>
-                        <label for="company" class="text-sm font-bold text-gray-300">Law Firm / Company</label>
-                        <input type="text" id="company" name="company" class="w-full mt-2 p-3 bg-gray-800 rounded-lg border border-gray-700 text-white focus:outline-none focus:border-accent-gold">
-                    </div>
-                    <div>
-                        <label for="message" class="text-sm font-bold text-gray-300">Message</label>
-                        <textarea id="message" name="message" rows="4" class="w-full mt-2 p-3 bg-gray-800 rounded-lg border border-gray-700 text-white focus:outline-none focus:border-accent-gold" required></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="bg-accent-gold text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover-bg-accent-gold-dark transition-colors shadow-xl">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900/50">
-        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
-            <p>&copy; 2025 Fernando Abel Morales Aguilar, MD, CMI. All Rights Reserved.</p>
-            <p class="mt-2">
-                <!-- LinkedIn Profile URL updated -->
-                <a href="https://www.linkedin.com/in/dr-fernando-abel-morales-aguilar-59621b2b6" target="_blank" rel="noopener noreferrer" class="hover:text-accent-gold">LinkedIn Profile</a>
-            </p>
         </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">The Unbeatable Advantage</h2>
+            <div class="advantage-content">
+                <div class="advantage-video">
+                    <div class="video-placeholder">
+                        Your Professional Video Introduction Here
+                    </div>
+                </div>
+                <div class="advantage-points">
+                    <ul>
+                        <li><strong>Mitigate Risk.</strong> Eliminate the danger of costly medical mistranslations that can jeopardize your case. My clinical experience ensures perfect accuracy.</li>
+                        <li><strong>Unparalleled Expertise.</strong> As a native bilingual physician, I understand the deep clinical nuances behind the words, providing a level of comprehension standard interpreters cannot match.</li>
+                        <li><strong>Guaranteed Confidentiality.</strong> As a Certified Medical Interpreter (CMI), I adhere to the highest national standards of ethics, confidentiality, and impartiality required in a legal setting.</li>
+                    </ul>
+                    <a href="link-to-your-cv.pdf" class="cta-button secondary-button" target="_blank">Download Full CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Key Qualifications Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Key Qualifications & Expertise</h2>
+            <div class="qualifications-grid">
+                <div class="qualification-card">
+                    <h3>High-Stakes Clinical Experience</h3>
+                    <p>My background in the Emergency Department has given me extensive hands-on experience with acute trauma, orthopedic injuries, and neurological events. I perform with precision and composure in high-pressure environments, a critical skill for legal proceedings.</p>
+                </div>
+                <div class="qualification-card">
+                    <h3>Remote-Ready & Tech Proficient</h3>
+                    <p>I am highly proficient with all modern remote work platforms, including Zoom, Doxy.me, and secure document management systems. I guarantee a seamless and professional technical experience for all remote depositions and meetings.</p>
+                </div>
+                <div class="qualification-card">
+                    <h3>Specialized Medical Knowledge</h3>
+                    <p>Beyond general practice, I have a deep knowledge base in metabolic health and chronic disease management. This provides crucial context for cases where pre-existing conditions like diabetes or obesity are a factor in long-term injury claims.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me to Discuss Your Case</h2>
+            <p>I am available for assignments throughout North America. Please reach out to discuss your specific needs and check my availability.</p>
+            <a href="mailto:contact@fernandomoralesmd.com" class="cta-button">Email: contact@fernandomoralesmd.com</a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>© 2025 Fernando Morales, MD. All Rights Reserved.</p>
     </footer>
 
 </body>
