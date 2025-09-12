@@ -71,6 +71,36 @@
             background-color: #007bff;
             color: #fff;
         }
+        
+        /* MODIFIED: Trust Bar styles */
+        .trust-bar {
+            padding: 30px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+        .trust-bar-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .trust-bar span {
+            font-size: 1em;
+            color: #6c757d;
+            margin-right: 10px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+        .client-type {
+            background-color: #f8f9fa;
+            color: #495057;
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
         .section {
             padding: 60px 0;
         }
@@ -241,6 +271,17 @@
         </div>
     </header>
 
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-bar-content">
+                <span>SPECIALIZING IN SERVICES FOR:</span>
+                <div class="client-type">Top US Law Firms</div>
+                <div class="client-type">Insurance Carriers</div>
+                <div class="client-type">Language Service Providers</div>
+            </div>
+        </div>
+    </section>
+
     <section class="section" id="services">
         <div class="container">
             <h2 class="section-title">Core Services</h2>
@@ -334,7 +375,7 @@
         <div style="text-align: center; max-width: 600px; margin: 0 auto;">
             
             <div style="width: 110px; height: 110px; border-radius: 50%; background-color: #fff; border: 2px solid #dee2e6; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px auto; overflow: hidden;">
-                <img src="https://i.imgur.com/ldgepDp.png" alt="National Board of Certification for Medical Interpreters Logo" style="max-width: 90%;">
+                <img src="images/nbcmi-logo.png" alt="National Board of Certification for Medical Interpreters Logo" style="max-width: 90%;">
             </div>
             <p style="font-size: 1.1em; color: #333;">
                 As a dedicated candidate for certification, I adhere to the professional standards and code of ethics established by the <strong>National Board of Certification for Medical Interpreters (NBCMI)</strong>.
@@ -360,8 +401,3 @@
 
 </body>
 </html>
-
-
-
-
-
